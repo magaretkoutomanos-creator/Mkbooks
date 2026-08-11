@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Books | Magaret Koutomanos | Book Marketing Specialist & Manuscript Editor</title>
+    <meta name="description" content="Magaret Koutomanos is a professional book marketing specialist and manuscript editor helping serious authors refine position and launch books that sell.">
+    <meta name="keywords" content="book marketing, manuscript editor, book launch strategy, author branding, book positioning, Magaret Koutomanos, MK Books, publishing strategy">
+    <meta name="author" content="Magaret Koutomanos">
+    <meta property="og:title" content="MK Books | Magaret Koutomanos">
+    <meta property="og:description" content="Professional book marketing and manuscript editing for serious authors who demand excellence.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mkbooks.com">
+    <link rel="icon" type="image/jpeg" href="mkbooks_logo_circle_3d.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-base:#06060f;--bg-deep:#0a0a1a;--bg-card:#111128;--bg-card-alt:#141430;
+            --navy:#0c1e38;--navy-soft:#0f2a4a;
+            --gold:#c6a147;--gold-bright:#dbb95f;--gold-pale:#e6cc85;--gold-muted:#9d7f30;
+            --cream:#faf6ed;--cream-soft:#f2eddf;
+            --txt:#e8e3d8;--txt-mid:#9898ae;--txt-dim:#6a6a80;
+            --border-thin:rgba(198,161,71,0.09);--border-med:rgba(198,161,71,0.22);--border-strong:rgba(198,161,71,0.4);
+            --glow:rgba(198,161,71,0.07);--shadow:rgba(0,0,0,0.45);
+            --ease:cubic-bezier(0.16,1,0.3,1);
+        }
+
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;overflow-x:hidden}
+        body{font-family:'Inter',system-ui,sans-serif;background:var(--bg-base);color:var(--txt);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+        ::selection{background:var(--gold);color:var(--bg-base)}
+        ::-webkit-scrollbar{width:6px}
+        ::-webkit-scrollbar-track{background:var(--bg-base)}
+        ::-webkit-scrollbar-thumb{background:var(--gold-muted);border-radius:6px}
+        ::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+        img{max-width:100%;display:block}
+        a{transition:all 0.3s ease}
+
+        /* PRELOADER */
+        #loader{position:fixed;inset:0;background:var(--bg-base);z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 1.1s var(--ease),visibility 1.1s}
+        #loader.hide{opacity:0;visibility:hidden;pointer-events:none}
+        .ld-orbit{position:relative;width:130px;height:130px;margin-bottom:30px}
+        .ld-ring{position:absolute;inset:0;border-radius:50%;border:2px solid transparent}
+        .ld-ring-1{border-top-color:var(--gold);border-right-color:var(--gold-muted);animation:spin 1.3s linear infinite}
+        .ld-ring-2{inset:13px;border-bottom-color:var(--gold-bright);border-left-color:var(--gold);animation:spin 0.9s linear infinite reverse}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        .ld-logo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+        .ld-name{font-family:'Playfair Display',serif;font-size:1.45rem;color:var(--gold);letter-spacing:6px;text-transform:uppercase;margin-bottom:5px}
+        .ld-tag{font-size:0.66rem;color:var(--txt-dim);letter-spacing:3px;text-transform:uppercase}
+        .ld-bar{width:175px;height:2px;background:var(--border-thin);margin-top:26px;border-radius:2px;overflow:hidden}
+        .ld-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold-muted),var(--gold),var(--gold-bright));border-radius:2px;animation:barFill 2.5s var(--ease) forwards}
+        @keyframes barFill{0%{width:0}50%{width:50%}100%{width:100%}}
+
+        /* NAVIGATION */
+        .nav{position:fixed;top:0;left:0;right:0;z-index:10000;padding:20px 50px;display:flex;align-items:center;justify-content:space-between;transition:all 0.5s var(--ease)}
+        .nav.fixed{padding:12px 50px;background:rgba(6,6,15,0.94);backdrop-filter:blur(28px) saturate(1.3);border-bottom:1px solid var(--border-thin);box-shadow:0 4px 40px rgba(0,0,0,0.35)}
+        .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+        .nav-logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);transition:all 0.4s var(--ease)}
+        .nav.fixed .nav-logo-img{width:36px;height:36px}
+        .nav-logo-txt{font-family:'Playfair Display',serif;font-size:1.28rem;font-weight:700;color:var(--gold);letter-spacing:3px}
+        .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+        .nav-links a{text-decoration:none;color:var(--txt);font-size:0.77rem;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;position:relative;padding:4px 0}
+        .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1.5px;background:var(--gold);transition:width 0.4s var(--ease)}
+        .nav-links a:hover{color:var(--gold)}
+        .nav-links a:hover::after{width:100%}
+        .nav-links .cta{border:1.5px solid var(--gold);color:var(--gold);padding:9px 24px;border-radius:3px;letter-spacing:2.5px;transition:all 0.4s var(--ease)}
+        .nav-links .cta:hover{background:var(--gold);color:var(--bg-base);box-shadow:0 5px 22px rgba(198,161,71,0.25)}
+        .nav-links .cta::after{display:none}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:10001;padding:4px}
+        .hamburger span{width:24px;height:2px;background:var(--gold);border-radius:2px;transition:all 0.4s var(--ease)}
+        .hamburger.on span:nth-child(1){transform:rotate(45deg) translate(4px,5px)}
+        .hamburger.on span:nth-child(2){opacity:0;transform:translateX(8px)}
+        .hamburger.on span:nth-child(3){transform:rotate(-45deg) translate(5px,-6px)}
+
+        /* HERO */
+        .hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:135px 50px 95px;overflow:hidden;background:linear-gradient(155deg,var(--bg-base) 0%,var(--bg-deep) 28%,var(--navy) 58%,var(--bg-deep) 84%,var(--bg-base) 100%)}
+        .hero-amb{position:absolute;inset:0;z-index:1;pointer-events:none}
+        .hero-orb{position:absolute;border-radius:50%;filter:blur(95px);opacity:0.055}
+        .hero-orb-1{width:620px;height:620px;background:var(--gold);top:-240px;right:-140px;animation:orbMove 13s ease-in-out infinite}
+        .hero-orb-2{width:430px;height:430px;background:var(--navy-soft);bottom:-140px;left:-110px;animation:orbMove 17s ease-in-out infinite reverse}
+        .hero-orb-3{width:330px;height:330px;background:var(--gold-muted);top:38%;left:48%;animation:orbMove 10s ease-in-out infinite 2.5s}
+        @keyframes orbMove{0%,100%{transform:translate(0,0) scale(1)}35%{transform:translate(22px,-32px) scale(1.07)}70%{transform:translate(-18px,28px) scale(0.95)}}
+        .hero-dots{position:absolute;inset:0;z-index:2}
+        .hdot{position:absolute;background:var(--gold);border-radius:50%;opacity:0;animation:dotUp 11s infinite}
+        @keyframes dotUp{0%{opacity:0;transform:translateY(100vh) scale(0)}12%{opacity:0.4}88%{opacity:0.08}100%{opacity:0;transform:translateY(-10vh) scale(1)}}
+        .hero-mesh{position:absolute;inset:0;z-index:2;background-image:linear-gradient(rgba(198,161,71,0.013) 1px,transparent 1px),linear-gradient(90deg,rgba(198,161,71,0.013) 1px,transparent 1px);background-size:52px 52px}
+        .hero-wrap{position:relative;z-index:5;display:flex;align-items:center;gap:72px;max-width:1360px;width:100%;margin:0 auto}
+        .hero-txt{flex:1.4}
+        .hero-badge{display:inline-flex;align-items:center;gap:9px;background:var(--glow);border:1px solid var(--border-med);padding:8px 19px;border-radius:3px;margin-bottom:28px;opacity:0;transform:translateY(20px);animation:up 0.7s var(--ease) 0.5s forwards}
+        .hero-badge-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:blink 2.2s ease-in-out infinite}
+        @keyframes blink{0%,100%{opacity:0.35;transform:scale(1)}50%{opacity:1;transform:scale(1.35)}}
+        .hero-badge span{font-size:0.69rem;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold)}
+        .hero-h1{font-family:'Playfair Display',serif;font-size:3.4rem;font-weight:700;line-height:1.16;margin-bottom:28px;color:var(--cream);opacity:0;transform:translateY(28px);animation:up 0.9s var(--ease) 0.7s forwards}
+        .hero-h1 em{font-style:italic;color:var(--gold-bright)}
+        .hero-h1 strong{color:var(--gold);font-weight:700}
+        .hero-desc{font-family:'Cormorant Garamond',serif;font-size:1.13rem;line-height:1.95;color:var(--txt-mid);margin-bottom:18px;max-width:590px;opacity:0;transform:translateY(22px);animation:up 0.9s var(--ease) 0.92s forwards}
+        .hero-mail{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;background:var(--glow);border:1px solid var(--border-thin);border-radius:3px;margin-bottom:32px;opacity:0;transform:translateY(16px);animation:up 0.7s var(--ease) 1.08s forwards}
+        .hero-mail i{color:var(--gold);font-size:0.88rem}
+        .hero-mail a{color:var(--gold-bright);text-decoration:none;font-size:0.9rem;font-weight:500}
+        .hero-mail a:hover{color:var(--gold);text-decoration:underline}
+        .hero-btns{display:flex;align-items:center;gap:18px;flex-wrap:wrap;opacity:0;transform:translateY(22px);animation:up 0.9s var(--ease) 1.18s forwards}
+        .btn-main{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--bg-base);padding:15px 38px;border:none;border-radius:3px;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all 0.4s var(--ease);position:relative;overflow:hidden}
+        .btn-main::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transition:0.55s}
+        .btn-main:hover{transform:translateY(-3px);box-shadow:0 13px 38px rgba(198,161,71,0.32);background:var(--gold-bright)}
+        .btn-main:hover::after{left:100%}
+        .btn-ghost{display:inline-flex;align-items:center;gap:8px;color:var(--txt);text-decoration:none;font-size:0.75rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:15px 28px;border:1px solid rgba(255,255,255,0.1);border-radius:3px;transition:all 0.4s var(--ease)}
+        .btn-ghost:hover{border-color:var(--gold);color:var(--gold);background:var(--glow)}
+        .hero-fine{margin-top:18px;font-size:0.72rem;color:var(--txt-dim);opacity:0;animation:up 0.6s var(--ease) 1.35s forwards}
+        .hero-img{flex:0.62;display:flex;justify-content:center;opacity:0;transform:translateX(48px) scale(0.96);animation:imgIn 1.2s var(--ease) 1s forwards}
+        @keyframes imgIn{to{opacity:1;transform:none}}
+        .port{position:relative;width:350px;height:460px}
+        .port-frame{position:absolute;top:-15px;left:-15px;right:15px;bottom:15px;border:2px solid var(--gold);border-radius:5px;z-index:1;transition:all 0.5s var(--ease)}
+        .port:hover .port-frame{top:-9px;left:-9px}
+
+        .port-photo{
+            position:relative;z-index:2;width:100%;height:100%;
+            overflow:hidden;border-radius:5px;
+            box-shadow:0 28px 65px var(--shadow);
+            background:linear-gradient(160deg,#0d1b33,#111128);
+        }
+        .port-photo img{
+            width:100%;
+            height:100%;
+            object-fit:contain;
+            object-position:center bottom;
+            transition:all 0.5s var(--ease);
+        }
+
+        .port:hover .port-photo img{transform:scale(1.03)}
+        .port-glow{position:absolute;bottom:-28px;right:-28px;width:135px;height:135px;background:var(--gold);opacity:0.04;border-radius:50%;filter:blur(45px)}
+        .fbadge{position:absolute;background:rgba(6,6,15,0.92);backdrop-filter:blur(14px);border:1px solid var(--border-med);padding:15px 20px;border-radius:5px;z-index:4;box-shadow:0 10px 28px var(--shadow)}
+        .fbadge-1{bottom:32px;left:-42px;animation:bFloat 4.5s ease-in-out infinite}
+        .fbadge-2{top:22px;right:-32px;animation:bFloat 4.5s ease-in-out infinite 1.8s}
+        @keyframes bFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+        .fbadge-label{font-size:0.58rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:3px}
+        .fbadge-val{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:var(--cream)}
+        @keyframes up{to{opacity:1;transform:none}}
+
+        /* TRUST */
+        .trust{background:var(--glow);border-top:1px solid var(--border-thin);border-bottom:1px solid var(--border-thin);padding:40px 50px}
+        .trust-row{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+        .trust-chip{display:flex;align-items:center;gap:12px;opacity:0;transform:translateY(18px)}
+        .trust-chip.v{animation:up 0.5s var(--ease) forwards}
+        .trust-ico{width:44px;height:44px;border-radius:50%;background:var(--glow);border:1px solid var(--border-med);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:0.88rem;flex-shrink:0;transition:all 0.4s var(--ease)}
+        .trust-chip:hover .trust-ico{background:rgba(198,161,71,0.13);transform:scale(1.1)}
+        .trust-txt{font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt-mid);font-weight:500}
+
+        /* SECTIONS */
+        .sc{padding:125px 50px;position:relative}
+        .sc-dark{background:linear-gradient(180deg,var(--bg-base),var(--bg-deep))}
+        .sc-alt{background:var(--bg-deep)}
+        .sc-hd{text-align:center;max-width:790px;margin:0 auto 78px}
+        .sc-ey{display:inline-flex;align-items:center;gap:11px;font-size:0.65rem;font-weight:700;letter-spacing:4.5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+        .sc-ey::before,.sc-ey::after{content:'';width:30px;height:1px;background:var(--gold-muted)}
+        .sc-h2{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:700;line-height:1.22;color:var(--cream);margin-bottom:18px}
+        .sc-div{width:48px;height:2.5px;background:linear-gradient(90deg,var(--gold),var(--gold-bright));margin:18px auto;border-radius:2px}
+        .sc-sub{font-family:'Cormorant Garamond',serif;font-size:1.08rem;line-height:1.88;color:var(--txt-mid)}
+
+        /* PHILOSOPHY */
+        .ph-body{max-width:850px;margin:0 auto}
+        .ph-p{font-family:'Cormorant Garamond',serif;font-size:1.14rem;line-height:2.05;color:var(--txt-mid);margin-bottom:24px}
+        .ph-pull{font-family:'Playfair Display',serif;font-size:1.44rem;font-weight:600;color:var(--gold);text-align:center;padding:40px 32px;margin:45px 0;border-top:1px solid var(--border-thin);border-bottom:1px solid var(--border-thin);font-style:italic;line-height:1.65;position:relative}
+        .ph-pull::before{content:'\201C';font-size:4.5rem;position:absolute;top:-12px;left:50%;transform:translateX(-50%);color:rgba(198,161,71,0.07);font-family:'Playfair Display',serif}
+
+        /* ABOUT */
+        .ab-grid{display:flex;gap:72px;align-items:flex-start;max-width:1160px;margin:0 auto}
+        .ab-left{flex:0 0 365px;position:sticky;top:112px}
+        .ab-img-wrap{position:relative}
+        .ab-img-bdr{position:absolute;top:14px;left:14px;width:100%;height:100%;border:2px solid var(--gold);border-radius:5px;transition:all 0.5s var(--ease)}
+        .ab-img-wrap:hover .ab-img-bdr{top:8px;left:8px}
+
+        .ab-img{
+            position:relative;z-index:1;width:100%;height:500px;
+            overflow:hidden;border-radius:5px;
+            box-shadow:0 20px 50px var(--shadow);
+            background:linear-gradient(160deg,#0d1b33,#111128);
+        }
+        .ab-img img{
+            width:100%;
+            height:100%;
+            object-fit:contain;
+            object-position:center bottom;
+            transition:all 0.5s var(--ease);
+        }
+        .ab-img:hover img{transform:scale(1.02)}
+
+        .ab-stds{margin-top:26px;padding:24px;background:var(--bg-card);border:1px solid var(--border-thin);border-radius:5px}
+        .ab-stds-h{font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--gold);margin-bottom:15px;letter-spacing:1.5px}
+        .ab-std{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border-thin)}
+        .ab-std:last-child{border-bottom:none}
+        .ab-std i{color:var(--gold);font-size:0.62rem;width:15px;flex-shrink:0}
+        .ab-std span{font-size:0.78rem;color:var(--txt-mid)}
+        .ab-right{flex:1}
+        .ab-ey{font-size:0.65rem;font-weight:700;letter-spacing:4.5px;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
+        .ab-name{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--cream);margin-bottom:5px;line-height:1.2}
+        .ab-role{font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--gold-bright);margin-bottom:28px;font-style:italic}
+        .ab-p{font-family:'Cormorant Garamond',serif;font-size:1.04rem;line-height:1.98;color:var(--txt-mid);margin-bottom:20px}
+        .ab-mail{margin-top:40px;padding:24px 28px;background:var(--glow);border:1px solid var(--border-med);border-radius:5px;display:flex;align-items:center;gap:18px}
+        .ab-mail-ico{width:50px;height:50px;border-radius:50%;background:rgba(198,161,71,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.08rem;flex-shrink:0}
+        .ab-mail-info{display:flex;flex-direction:column}
+        .ab-mail-label{font-size:0.65rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--txt-dim);margin-bottom:3px}
+        .ab-mail-link{color:var(--gold);text-decoration:none;font-size:0.98rem;font-weight:600}
+        .ab-mail-link:hover{color:var(--gold-bright)}
+        .ab-mail-site{color:var(--txt-dim);font-size:0.78rem;margin-top:2px}
+
+        /* SERVICES */
+        .sv-pre{max-width:870px;margin:0 auto 78px;text-align:center}
+        .sv-pre-p{font-family:'Cormorant Garamond',serif;font-size:1.08rem;line-height:1.92;color:var(--txt-mid);margin-bottom:14px}
+        .sv-card{max-width:1060px;margin:0 auto 82px;background:linear-gradient(145deg,var(--bg-card),var(--bg-card-alt));border:1px solid var(--border-thin);border-radius:5px;overflow:hidden;transition:all 0.5s var(--ease)}
+        .sv-card:last-child{margin-bottom:0}
+        .sv-card:hover{border-color:var(--border-med);box-shadow:0 14px 48px rgba(0,0,0,0.22)}
+        .sv-top{padding:42px 48px;background:linear-gradient(135deg,rgba(198,161,71,0.045),rgba(198,161,71,0.008));border-bottom:1px solid var(--border-thin);position:relative}
+        .sv-num{font-family:'Playfair Display',serif;font-size:4.2rem;font-weight:800;color:rgba(198,161,71,0.055);position:absolute;top:10px;right:30px;line-height:1}
+        .sv-ey{font-size:0.65rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+        .sv-name{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--cream);margin-bottom:6px}
+        .sv-tag{font-family:'Cormorant Garamond',serif;font-size:1.04rem;color:var(--gold-bright);font-style:italic}
+        .sv-body{padding:42px 48px}
+        .sv-d{font-family:'Cormorant Garamond',serif;font-size:1.04rem;line-height:1.95;color:var(--txt-mid);margin-bottom:30px}
+        .sv-fh{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:600;color:var(--cream);margin-bottom:24px;padding-bottom:11px;border-bottom:1px solid var(--border-thin)}
+        .sv-f{margin-bottom:26px;padding-left:20px;border-left:2.5px solid var(--gold-muted);transition:all 0.3s var(--ease)}
+        .sv-f:hover{border-left-color:var(--gold);padding-left:24px}
+        .sv-fn{font-family:'Playfair Display',serif;font-size:1.04rem;font-weight:600;color:var(--gold-bright);margin-bottom:9px}
+        .sv-fd{font-family:'Cormorant Garamond',serif;font-size:0.98rem;line-height:1.92;color:var(--txt-mid)}
+        .sv-for{margin-top:42px;padding-top:32px;border-top:1px solid var(--border-thin)}
+        .sv-for-h{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:600;color:var(--cream);margin-bottom:20px}
+        .sv-for-i{display:flex;align-items:flex-start;gap:12px;margin-bottom:13px}
+        .sv-for-dot{color:var(--gold);font-size:0.42rem;margin-top:9px;flex-shrink:0}
+        .sv-for-t{font-family:'Cormorant Garamond',serif;font-size:0.98rem;line-height:1.85;color:var(--txt-mid)}
+
+        /* PROCESS */
+        .pr-body{max-width:870px;margin:0 auto;position:relative}
+        .pr-line{position:absolute;left:30px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--gold),var(--gold-muted),rgba(198,161,71,0.06))}
+        .pr-step{display:flex;gap:36px;margin-bottom:48px}
+        .pr-step:last-child{margin-bottom:0}
+        .pr-dot{width:60px;height:60px;border-radius:50%;background:var(--bg-card);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.12rem;font-weight:700;color:var(--gold);flex-shrink:0;position:relative;z-index:3;transition:all 0.4s var(--ease)}
+        .pr-step:hover .pr-dot{background:var(--gold);color:var(--bg-base);box-shadow:0 5px 22px rgba(198,161,71,0.28)}
+        .pr-info{flex:1;padding-top:9px}
+        .pr-h{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:600;color:var(--cream);margin-bottom:11px}
+        .pr-p{font-family:'Cormorant Garamond',serif;font-size:1.01rem;line-height:1.92;color:var(--txt-mid)}
+
+        /* SPOTLIGHT */
+        .spot{padding:100px 50px;background:linear-gradient(135deg,var(--glow),transparent,var(--glow));border-top:1px solid var(--border-thin);border-bottom:1px solid var(--border-thin)}
+        .spot-flex{max-width:1060px;margin:0 auto;display:flex;align-items:center;gap:58px}
+
+        .spot-img{
+            flex:0 0 300px;height:400px;overflow:hidden;border-radius:5px;
+            border:2px solid var(--border-med);
+            box-shadow:0 20px 50px var(--shadow);
+            background:linear-gradient(160deg,#0d1b33,#111128);
+        }
+        .spot-img img{
+            width:100%;
+            height:100%;
+            object-fit:contain;
+            object-position:center bottom;
+            transition:all 0.5s var(--ease);
+        }
+        .spot-img:hover img{transform:scale(1.03)}
+
+        .spot-copy{flex:1}
+        .spot-ey{font-size:0.65rem;font-weight:700;letter-spacing:4.5px;text-transform:uppercase;color:var(--gold);margin-bottom:13px}
+        .spot-h{font-family:'Playfair Display',serif;font-size:1.95rem;font-weight:700;color:var(--cream);margin-bottom:18px;line-height:1.35}
+        .spot-p{font-family:'Cormorant Garamond',serif;font-size:1.04rem;line-height:1.92;color:var(--txt-mid);margin-bottom:13px}
+        .spot-mail{display:inline-flex;align-items:center;gap:9px;color:var(--gold);text-decoration:none;font-size:0.93rem;font-weight:600;margin-top:15px;padding:10px 18px;background:var(--glow);border:1px solid var(--border-med);border-radius:4px;transition:all 0.4s var(--ease)}
+        .spot-mail:hover{background:rgba(198,161,71,0.11);transform:translateY(-2px)}
+
+        /* TESTIMONIALS */
+        .tm-box{max-width:800px;margin:0 auto;text-align:center}
+        .tm-inner{padding:52px 45px;background:var(--bg-card);border:1px solid var(--border-thin);border-radius:5px}
+        .tm-q{font-family:'Playfair Display',serif;font-size:4.2rem;color:rgba(198,161,71,0.07);line-height:1;margin-bottom:16px}
+        .tm-h{font-family:'Playfair Display',serif;font-size:1.45rem;color:var(--cream);margin-bottom:16px}
+        .tm-p{font-family:'Cormorant Garamond',serif;font-size:1.04rem;line-height:1.9;color:var(--txt-mid);margin-bottom:14px}
+        .tm-note{font-size:0.8rem;color:var(--gold-muted);font-style:italic;margin-top:20px;padding-top:20px;border-top:1px solid var(--border-thin)}
+        .tm-note a{color:var(--gold);text-decoration:none}
+        .tm-note a:hover{text-decoration:underline}
+
+        /* CONTACT */
+        .ct-wrap{max-width:870px;margin:0 auto}
+        .ct-top{text-align:center;margin-bottom:48px}
+        .ct-top-p{font-family:'Cormorant Garamond',serif;font-size:1.06rem;line-height:1.92;color:var(--txt-mid);margin-bottom:14px}
+        .ct-pill{display:inline-flex;align-items:center;gap:10px;background:var(--glow);border:1px solid var(--border-med);padding:13px 28px;border-radius:4px;margin-top:18px;transition:all 0.4s var(--ease)}
+        .ct-pill:hover{background:rgba(198,161,71,0.09);transform:translateY(-2px)}
+        .ct-pill i{color:var(--gold);font-size:1.02rem}
+        .ct-pill a{color:var(--gold);text-decoration:none;font-size:1rem;font-weight:600}
+        .ct-pill a:hover{color:var(--gold-bright)}
+        .ct-rules{background:var(--bg-card);border:1px solid var(--border-thin);border-radius:5px;padding:34px 38px;margin-bottom:40px}
+        .ct-rules-h{font-family:'Playfair Display',serif;font-size:1.08rem;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+        .ct-rules-h i{font-size:0.82rem}
+        .ct-rules-p{font-family:'Cormorant Garamond',serif;font-size:0.96rem;line-height:1.88;color:var(--txt-mid);margin-bottom:11px}
+        .ct-rules-p:last-child{margin-bottom:0}
+        .f-box{background:var(--bg-card);border:1px solid var(--border-thin);border-radius:5px;padding:50px;position:relative;overflow:hidden}
+        .f-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-muted),var(--gold),var(--gold-bright),var(--gold))}
+        .f-box-h{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--cream);margin-bottom:38px;text-align:center}
+        .f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+        .fg{margin-bottom:18px}
+        .fg-lbl{display:block;font-size:0.68rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+        .fg-hint{display:block;font-size:0.74rem;color:var(--txt-dim);font-weight:400;letter-spacing:0;text-transform:none;margin-top:3px;line-height:1.5}
+        .fg-in,.fg-sel,.fg-ta{width:100%;padding:13px 16px;background:rgba(255,255,255,0.02);border:1px solid var(--border-thin);border-radius:4px;color:var(--txt);font-family:'Inter',sans-serif;font-size:0.85rem;outline:none;transition:all 0.4s var(--ease)}
+        .fg-in::placeholder,.fg-ta::placeholder{color:rgba(154,154,176,0.35)}
+        .fg-in:focus,.fg-sel:focus,.fg-ta:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--glow);background:rgba(255,255,255,0.03)}
+        .fg-sel{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23c6a147' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+        .fg-sel option{background:var(--bg-card);color:var(--txt)}
+        .fg-ta{min-height:205px;resize:vertical;line-height:1.75}
+        .f-submit{width:100%;padding:17px;background:var(--gold);color:var(--bg-base);border:none;border-radius:4px;font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all 0.4s var(--ease);position:relative;overflow:hidden;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:9px}
+        .f-submit::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);transition:0.6s}
+        .f-submit:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 12px 32px rgba(198,161,71,0.32)}
+        .f-submit:hover::after{left:100%}
+        .f-submit:disabled{opacity:0.6;cursor:not-allowed}
+        .f-note{text-align:center;margin-top:20px;font-size:0.74rem;color:var(--txt-dim);line-height:1.65}
+
+        /* FOOTER */
+        .ft{background:var(--bg-base);border-top:1px solid var(--border-thin);padding:78px 50px 35px}
+        .ft-grid{max-width:1160px;margin:0 auto 52px;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px}
+        .ft-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+        .ft-logo img{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold)}
+        .ft-logo span{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--gold);letter-spacing:3px}
+        .ft-desc{font-family:'Cormorant Garamond',serif;font-size:0.93rem;line-height:1.85;color:var(--txt-mid);margin-bottom:18px}
+        .ft-name{font-family:'Playfair Display',serif;font-size:0.93rem;color:var(--cream);margin-bottom:3px}
+        .ft-role{font-size:0.78rem;color:var(--gold-bright);font-style:italic}
+        .ft-col-h{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:600;color:var(--gold);margin-bottom:20px;letter-spacing:1.5px}
+        .ft-nav{list-style:none}
+        .ft-nav li{margin-bottom:10px}
+        .ft-nav a{color:var(--txt-mid);text-decoration:none;font-size:0.82rem;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s}
+        .ft-nav a i{font-size:0.48rem;color:var(--gold-muted);transition:color 0.3s}
+        .ft-nav a:hover{color:var(--gold);transform:translateX(3px)}
+        .ft-nav a:hover i{color:var(--gold)}
+        .ft-ct{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+        .ft-ct i{color:var(--gold);font-size:0.8rem;width:17px;flex-shrink:0}
+        .ft-ct a,.ft-ct span{color:var(--txt-mid);text-decoration:none;font-size:0.82rem;transition:color 0.3s}
+        .ft-ct a:hover{color:var(--gold)}
+        .ft-hr{width:100%;height:1px;background:var(--border-thin);margin-bottom:24px}
+        .ft-bot{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:11px}
+        .ft-copy{font-size:0.72rem;color:var(--txt-dim)}
+        .ft-legal{font-size:0.66rem;color:rgba(106,106,128,0.55);max-width:450px;line-height:1.6}
+        .ft-end{max-width:1160px;margin:26px auto 0;padding-top:20px;border-top:1px solid var(--border-thin)}
+        .ft-end p{font-family:'Cormorant Garamond',serif;font-size:0.84rem;color:rgba(106,106,128,0.38);line-height:1.85;text-align:center;font-style:italic}
+
+        /* BACK TO TOP */
+        .btt{position:fixed;bottom:26px;right:26px;width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--bg-base);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.92rem;z-index:9998;opacity:0;visibility:hidden;transition:all 0.4s var(--ease);box-shadow:0 5px 22px rgba(198,161,71,0.28)}
+        .btt.v{opacity:1;visibility:visible}
+        .btt:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(198,161,71,0.42)}
+
+        /* REVEAL */
+        .rv{opacity:0;transform:translateY(40px);transition:opacity 0.82s var(--ease),transform 0.82s var(--ease)}
+        .rv.l{transform:translateX(-40px)}
+        .rv.r{transform:translateX(40px)}
+        .rv.s{transform:scale(0.93)}
+        .rv.v{opacity:1;transform:none}
+
+        /* RESPONSIVE */
+        @media(max-width:1080px){
+            .hero-wrap{flex-direction:column;text-align:center}
+            .hero-desc{max-width:100%}
+            .hero-btns{justify-content:center}
+            .hero-mail{margin-left:auto;margin-right:auto}
+            .hero-fine{text-align:center}
+            .port{width:280px;height:370px}
+            .fbadge-1{left:auto;right:-12px;bottom:22px}
+            .fbadge-2{top:12px;right:auto;left:-12px}
+            .ab-grid{flex-direction:column}
+            .ab-left{position:static;flex:none;width:100%;max-width:390px;margin:0 auto}
+            .spot-flex{flex-direction:column;text-align:center}
+            .spot-img{flex:none;width:100%;max-width:330px}
+            .spot-mail{justify-content:center}
+            .ft-grid{grid-template-columns:1fr}
+            .sc{padding:88px 35px}
+            .hero{padding:125px 35px 78px}
+        }
+        @media(max-width:768px){
+            .nav{padding:14px 20px}
+            .nav.fixed{padding:10px 20px}
+            .nav-links{position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100vh;background:rgba(6,6,15,0.98);backdrop-filter:blur(22px);flex-direction:column;padding:100px 30px 32px;gap:18px;transition:right 0.5s var(--ease);border-left:1px solid var(--border-thin)}
+            .nav-links.open{right:0}
+            .hamburger{display:flex}
+            .hero{padding:100px 20px 58px}
+            .hero-h1{font-size:1.95rem}
+            .hero-desc{font-size:0.98rem}
+            .port{width:225px;height:300px}
+            .fbadge-1,.fbadge-2{display:none}
+            .sc{padding:62px 20px}
+            .sc-h2{font-size:1.8rem}
+            .trust{padding:26px 16px}
+            .trust-row{gap:16px}
+            .sv-top,.sv-body{padding:24px}
+            .f-row{grid-template-columns:1fr}
+            .f-box{padding:26px 20px}
+            .ft{padding:52px 20px 26px}
+            .ft-bot{flex-direction:column;text-align:center}
+            .ab-img{height:390px}
+            .ab-name{font-size:1.9rem}
+            .spot{padding:62px 20px}
+            .pr-line{display:none}
+            .pr-step{flex-direction:column;gap:14px}
+        }
+        @media(max-width:480px){
+            .hero-h1{font-size:1.6rem}
+            .hero-btns{flex-direction:column;width:100%}
+            .btn-main,.btn-ghost{width:100%;justify-content:center}
+            .sc-h2{font-size:1.45rem}
+            .port{width:195px;height:260px}
+            .nav-logo-txt{font-size:1.02rem;letter-spacing:2px}
+            .ab-img{height:330px}
+            .ph-pull{font-size:1.15rem;padding:28px 18px}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="ld-orbit">
+            <div class="ld-ring ld-ring-1"></div>
+            <div class="ld-ring ld-ring-2"></div>
+            <img src="mkbooks_logo_circle_3d.jpg" alt="MK Books" class="ld-logo">
+        </div>
+        <div class="ld-name">MK Books</div>
+        <div class="ld-tag">Book Marketing Specialist</div>
+        <div class="ld-bar"><div class="ld-bar-fill"></div></div>
+    </div>
+
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-logo">
+            <img src="mkbooks_logo_circle_3d.jpg" alt="MK Books" class="nav-logo-img">
+            <span class="nav-logo-txt">MK BOOKS</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#philosophy">Philosophy</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact" class="cta">Inquire Now</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-amb"><div class="hero-orb hero-orb-1"></div><div class="hero-orb hero-orb-2"></div><div class="hero-orb hero-orb-3"></div></div>
+        <div class="hero-dots" id="heroDots"></div>
+        <div class="hero-mesh"></div>
+        <div class="hero-wrap">
+            <div class="hero-txt">
+                <div class="hero-badge"><div class="hero-badge-dot"></div><span>Book Marketing Specialist &amp; Manuscript Editor</span></div>
+                <h1 class="hero-h1">Your Manuscript Was Written With <em>Purpose.</em><br>Now It Deserves the <strong>Strategy</strong> to Match.</h1>
+                <p class="hero-desc">Every author has a story worth telling. But in a publishing landscape saturated with titles competing for the same readers the same shelf space and the same visibility a well written manuscript is no longer enough on its own. What separates the books that are discovered celebrated and purchased from the ones that quietly disappear is not talent alone. It is strategic refinement precise market positioning and the kind of editorial expertise that understands not just how a book reads but how a book performs.</p>
+                <p class="hero-desc" style="animation-delay:1s">Magaret Koutomanos is a professional book marketing specialist and manuscript editor who works exclusively with serious authors ready to elevate their work to the highest standard of quality and position it for the visibility sales and long term readership it deserves.</p>
+                <p class="hero-desc" style="animation-delay:1.04s">All projects are managed and communicated exclusively through structured documented email correspondence. Every decision every revision every strategic recommendation and every milestone is confirmed in writing creating a professional accountable and fully transparent record of the entire project from the first inquiry through to the final delivery.</p>
+                <div class="hero-mail"><i class="fas fa-envelope"></i><a href="mailto:magaretkoutomanos@gmail.com">magaretkoutomanos@gmail.com</a></div>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn-main"><i class="fas fa-paper-plane"></i> Submit a Project Inquiry</a>
+                    <a href="#services" class="btn-ghost"><i class="fas fa-arrow-down"></i> View Services</a>
+                </div>
+                <p class="hero-fine">All inquiries are carefully reviewed and responded to within 48 business hours via email.</p>
+            </div>
+            <div class="hero-img">
+                <div class="port">
+                    <div class="port-frame"></div>
+                    <div class="port-photo"><img src="magaret_kou-removebg-preview.png" alt="Magaret Koutomanos"></div>
+                    <div class="port-glow"></div>
+                    <div class="fbadge fbadge-1"><div class="fbadge-label">Commitment</div><div class="fbadge-val">Limited Clients Per Quarter</div></div>
+                    <div class="fbadge fbadge-2"><div class="fbadge-label">Communication</div><div class="fbadge-val">Email Only &bull; Documented</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust" id="trustBar">
+        <div class="trust-row">
+            <div class="trust-chip"><div class="trust-ico"><i class="fas fa-envelope-circle-check"></i></div><span class="trust-txt">Email Only Communication</span></div>
+            <div class="trust-chip"><div class="trust-ico"><i class="fas fa-file-signature"></i></div><span class="trust-txt">Written Agreements</span></div>
+            <div class="trust-chip"><div class="trust-ico"><i class="fas fa-shield-halved"></i></div><span class="trust-txt">Full Confidentiality</span></div>
+            <div class="trust-chip"><div class="trust-ico"><i class="fas fa-clock"></i></div><span class="trust-txt">48 Hour Response</span></div>
+            <div class="trust-chip"><div class="trust-ico"><i class="fas fa-gem"></i></div><span class="trust-txt">Limited Availability</span></div>
+        </div>
+    </div>
+
+    <section class="sc sc-dark" id="philosophy">
+        <div class="sc-hd rv"><span class="sc-ey">Philosophy</span><h2 class="sc-h2">There Is a Significant Difference Between a Finished Manuscript and a Market Ready Book</h2><div class="sc-div"></div></div>
+        <div class="ph-body">
+            <p class="ph-p rv">Most authors understand what it takes to finish writing a book. The discipline the sacrifice the hundreds of hours spent putting words on a page and shaping a story or an idea into something complete. What far fewer authors fully understand is what happens after the writing is done.</p>
+            <p class="ph-p rv">A finished manuscript is a beginning not an end. The journey from completed draft to a book that is genuinely ready for its readers is one that requires a different set of skills an entirely different lens and a level of strategic and editorial expertise that goes far beyond proofreading or surface level corrections.</p>
+            <p class="ph-p rv">The books that succeed in today's market whether published traditionally or independently share several qualities that have nothing to do with luck and everything to do with intentional professional preparation. They are structurally sound narratively consistent and written with a clarity and confidence that earns the reader's trust from the very first page.</p>
+            <div class="ph-pull rv s">These are not qualities that emerge by accident. They are the result of a rigorous professional process applied by someone who understands both the craft of writing and the mechanics of the publishing market at the deepest level. That process is what Magaret Koutomanos provides.</div>
+        </div>
+    </section>
+
+    <section class="sc sc-alt" id="about">
+        <div class="ab-grid">
+            <div class="ab-left rv l">
+                <div class="ab-img-wrap"><div class="ab-img-bdr"></div><div class="ab-img"><img src="magaret_kou-removebg-preview.png" alt="Magaret Koutomanos"></div></div>
+                <div class="ab-stds">
+                    <div class="ab-stds-h">Professional Standards</div>
+                    <div class="ab-std"><i class="fas fa-check"></i><span>Documented Email Communication Only</span></div>
+                    <div class="ab-std"><i class="fas fa-check"></i><span>Written Agreements for All Projects</span></div>
+                    <div class="ab-std"><i class="fas fa-check"></i><span>Milestone Based Progress Updates</span></div>
+                    <div class="ab-std"><i class="fas fa-check"></i><span>Limited Client Capacity Per Quarter</span></div>
+                    <div class="ab-std"><i class="fas fa-check"></i><span>Complete Project Documentation Delivered</span></div>
+                    <div class="ab-std"><i class="fas fa-check"></i><span>Full Professional Confidentiality</span></div>
+                </div>
+            </div>
+            <div class="ab-right rv r">
+                <div class="ab-ey">About</div>
+                <h2 class="ab-name">Magaret Koutomanos</h2>
+                <p class="ab-role">Book Marketing Specialist. Manuscript Editor. Strategic Partner for Serious Authors.</p>
+                <p class="ab-p">Magaret Koutomanos has built her professional practice around a single unwavering belief. That every serious author deserves access to the kind of expert editorial and strategic guidance that transforms a well written manuscript into a book that is genuinely ready to meet its readers and perform in a competitive market.</p>
+                <p class="ab-p">Her work sits at the intersection of two disciplines that are too rarely brought together with equal expertise. Editorial refinement and strategic book marketing. Most editors understand language but not markets. Most marketers understand positioning but not manuscripts. Magaret understands both and it is precisely this dual expertise that makes her practice distinct and her results measurable.</p>
+                <p class="ab-p">Her editorial work goes far beyond surface level correction. When Magaret reads a manuscript she is reading it the way a serious publishing professional reads it. Examining the structural integrity of the narrative assessing the consistency and authority of the voice identifying the places where clarity breaks down or momentum stalls and working through every layer of the text until the manuscript reads with the precision confidence and authority that serious publishing demands.</p>
+                <p class="ab-p">Her strategic work is equally rigorous. Understanding where a book belongs in the market who its ideal readers are how it should be described and presented what makes it distinctive from the titles it sits alongside and how to construct a launch and visibility strategy that gives it the best possible chance of being discovered and purchased.</p>
+                <p class="ab-p">Magaret works exclusively through documented email communication. This is not a limitation. It is a deliberate professional choice rooted in a commitment to accountability clarity and the kind of structured professional relationship that serious work requires.</p>
+                <p class="ab-p">Magaret accepts a limited number of projects per quarter. Every author who works with Magaret receives her full focus her deepest expertise and a level of care and rigor that is simply not possible when attention is divided across an unlimited client roster.</p>
+                <p class="ab-p">If you are a serious author who values expertise structure accountability and results Magaret Koutomanos is the professional partner your book deserves.</p>
+                <div class="ab-mail">
+                    <div class="ab-mail-ico"><i class="fas fa-envelope"></i></div>
+                    <div class="ab-mail-info"><span class="ab-mail-label">Direct Email</span><a href="mailto:magaretkoutomanos@gmail.com" class="ab-mail-link">magaretkoutomanos@gmail.com</a><span class="ab-mail-site">mkbooks.com</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sc sc-dark" id="services">
+        <div class="sc-hd rv"><span class="sc-ey">Services</span><h2 class="sc-h2">Professional Services for Authors Who Demand Excellence</h2><div class="sc-div"></div></div>
+        <div class="sv-pre rv">
+            <p class="sv-pre-p">Every service offered through this practice is built around a single standard. The highest level of professional expertise applied with full accountability transparency and structured communication to deliver results that are measurable meaningful and documented.</p>
+            <p class="sv-pre-p">No project begins without a written agreement. No decision is made without written confirmation. Every deliverable is documented and every milestone is communicated in writing.</p>
+        </div>
+        <div class="sv-card rv">
+            <div class="sv-top"><span class="sv-num">01</span><div class="sv-ey">Service One</div><h3 class="sv-name">Manuscript Refinement</h3><p class="sv-tag">The Foundation of Every Successful Book</p></div>
+            <div class="sv-body">
+                <p class="sv-d">A manuscript that is well written in the author's estimation and a manuscript that is genuinely ready for its readers are often two very different things. This is a comprehensive professional editorial engagement that examines your manuscript at every level and works systematically to bring every element to the highest possible standard.</p>
+                <div class="sv-fh">What This Service Covers</div>
+                <div class="sv-f"><div class="sv-fn">Structural Assessment and Development</div><p class="sv-fd">Thorough structural assessment examining organization chapter flow pacing narrative arc and internal logic. Detailed written analysis and specific documented recommendations are provided for both fiction and nonfiction.</p></div>
+                <div class="sv-f"><div class="sv-fn">Voice and Tone Consistency</div><p class="sv-fd">Close attention to voice and tone consistency throughout. Inconsistencies are documented and addressed with clear editorial recommendations that preserve what is distinctively yours.</p></div>
+                <div class="sv-f"><div class="sv-fn">Clarity and Precision of Language</div><p class="sv-fd">Sentence level examination for clarity precision economy and impact. Imprecise language is refined and dense passages are reworked for directness and authority.</p></div>
+                <div class="sv-f"><div class="sv-fn">Narrative Flow and Readability</div><p class="sv-fd">Assessment and refinement of flow ensuring the reading experience draws the reader forward with engagement rather than resistance.</p></div>
+                <div class="sv-f"><div class="sv-fn">Consistency of Detail and Internal Logic</div><p class="sv-fd">Careful attention to continuity errors character inconsistencies and timeline problems with clear recommendations for resolution.</p></div>
+                <div class="sv-f"><div class="sv-fn">Editorial Report and Documented Recommendations</div><p class="sv-fd">Comprehensive written editorial report documenting every significant finding and recommendation. One round of revision review included.</p></div>
+                <div class="sv-for"><div class="sv-for-h">Who This Service Is Designed For</div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors with a completed draft serious about reaching professional standard before submission.</p></div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors who received feedback indicating significant work is needed and want expert guidance.</p></div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors wanting an authoritative second set of eyes before reaching any reader editor or publisher.</p></div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors who understand manuscript standard reflects directly on professional credibility.</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="sv-card rv">
+            <div class="sv-top"><span class="sv-num">02</span><div class="sv-ey">Service Two</div><h3 class="sv-name">Book Positioning Strategy</h3><p class="sv-tag">Because the Market Does Not Read Manuscripts. It Reads Positioning.</p></div>
+            <div class="sv-body">
+                <p class="sv-d">A book can be beautifully written and still fail to find readers if not positioned correctly. Magaret's positioning service creates a comprehensive documented strategy for commercial visibility and success.</p>
+                <div class="sv-fh">What This Service Covers</div>
+                <div class="sv-f"><div class="sv-fn">Genre and Category Analysis</div><p class="sv-fd">Thorough analysis of genre category and subcategory landscape identifying precise positioning for greatest visibility.</p></div>
+                <div class="sv-f"><div class="sv-fn">Competitive Title Research and Differentiation</div><p class="sv-fd">Research into competitive landscape and development of a clear documented differentiation strategy.</p></div>
+                <div class="sv-f"><div class="sv-fn">Ideal Reader Profile Development</div><p class="sv-fd">Detailed documented profile examining reading habits preferences and motivations becoming the foundation for all marketing decisions.</p></div>
+                <div class="sv-f"><div class="sv-fn">Book Title and Subtitle Evaluation</div><p class="sv-fd">Evaluation against market standards with detailed analysis and recommendations for commercial impact.</p></div>
+                <div class="sv-f"><div class="sv-fn">Book Description and Back Cover Copy</div><p class="sv-fd">Professional rewrite or development producing copy that converts interest into purchase.</p></div>
+                <div class="sv-f"><div class="sv-fn">Metadata and Keyword Strategy</div><p class="sv-fd">Comprehensive keyword and metadata strategy maximizing discoverability across digital retail platforms.</p></div>
+                <div class="sv-f"><div class="sv-fn">Comprehensive Written Positioning Report</div><p class="sv-fd">Complete professional reference document serving as your authoritative positioning guide.</p></div>
+                <div class="sv-for"><div class="sv-for-h">Who This Service Is Designed For</div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors preparing to publish for the first time wanting strongest possible positioning.</p></div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors whose published book is underperforming and need professional reassessment.</p></div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors preparing to relaunch with comprehensive evidence based strategy.</p></div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors who understand commercial success is inseparable from intelligent positioning.</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="sv-card rv">
+            <div class="sv-top"><span class="sv-num">03</span><div class="sv-ey">Service Three</div><h3 class="sv-name">Book Launch Preparation</h3><p class="sv-tag">Because a Book That Is Ready to Be Published Is Not the Same as a Book That Is Ready to Launch</p></div>
+            <div class="sv-body">
+                <p class="sv-d">Publication is an event. Launch is a strategy. This comprehensive engagement ensures your book enters the market with full strategic infrastructure for momentum readers and long term success.</p>
+                <div class="sv-fh">What This Service Covers</div>
+                <div class="sv-f"><div class="sv-fn">Pre Launch Strategy Development</div><p class="sv-fd">Comprehensive pre launch strategy tailored to your book audience and resources with specific recommendations timelines and milestones.</p></div>
+                <div class="sv-f"><div class="sv-fn">Launch Timeline and Milestone Planning</div><p class="sv-fd">Detailed written launch timeline. A customized project document built around your specific book and goals.</p></div>
+                <div class="sv-f"><div class="sv-fn">Sales Copy Development and Refinement</div><p class="sv-fd">Review and refinement of all sales copy ensuring maximum impact across all platforms.</p></div>
+                <div class="sv-f"><div class="sv-fn">Retail Platform Optimization</div><p class="sv-fd">Full review and optimization covering category selection keyword optimization and listing completeness.</p></div>
+                <div class="sv-f"><div class="sv-fn">Author Bio and Media Kit Review</div><p class="sv-fd">Review and refinement ensuring authority credibility and personality that resonates with ideal readers.</p></div>
+                <div class="sv-f"><div class="sv-fn">Post Launch Visibility Strategy</div><p class="sv-fd">Documented strategy with evidence based recommendations for sustaining momentum and growing sales.</p></div>
+                <div class="sv-f"><div class="sv-fn">Comprehensive Written Launch Strategy Document</div><p class="sv-fd">Complete professional launch blueprint covering every element in full detail.</p></div>
+                <div class="sv-for"><div class="sv-for-h">Who This Service Is Designed For</div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors within three to six months of publication committed to the strongest possible launch.</p></div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors whose previous launch underperformed wanting comprehensive professional strategy.</p></div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors wanting to relaunch with renewed momentum and developed strategic infrastructure.</p></div>
+                    <div class="sv-for-i"><i class="fas fa-circle sv-for-dot"></i><p class="sv-for-t">Authors who understand launching is as demanding as writing and want a professional partner.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sc sc-alt" id="process">
+        <div class="sc-hd rv"><span class="sc-ey">Process</span><h2 class="sc-h2">A Professional Process Built on Clarity Structure and Complete Accountability</h2><div class="sc-div"></div><p class="sc-sub">Every project follows a structured documented process from first contact through final delivery. There are no informal arrangements no verbal agreements and no undocumented decisions.</p></div>
+        <div class="pr-body">
+            <div class="pr-line"></div>
+            <div class="pr-step rv"><div class="pr-dot">1</div><div class="pr-info"><h3 class="pr-h">Submit Your Project Inquiry</h3><p class="pr-p">Complete the inquiry form thoroughly. The quality of information you provide directly affects the quality of the response you receive. All information is treated with full professional confidentiality.</p></div></div>
+            <div class="pr-step rv"><div class="pr-dot">2</div><div class="pr-info"><h3 class="pr-h">Inquiry Review and Initial Response</h3><p class="pr-p">Magaret reviews every inquiry personally. Within 48 business hours you will receive a response via email with either a request for additional information or an initial assessment and recommended services.</p></div></div>
+            <div class="pr-step rv"><div class="pr-dot">3</div><div class="pr-info"><h3 class="pr-h">Project Scope and Written Agreement</h3><p class="pr-p">A detailed written project scope document sets out exactly what the engagement covers deliverables timeline and expectations. Nothing proceeds until both parties confirm in writing.</p></div></div>
+            <div class="pr-step rv"><div class="pr-dot">4</div><div class="pr-info"><h3 class="pr-h">Project Execution with Documented Milestone Updates</h3><p class="pr-p">Work proceeds with formal written updates at each milestone documenting work completed findings and next steps ensuring you are informed at every stage.</p></div></div>
+            <div class="pr-step rv"><div class="pr-dot">5</div><div class="pr-info"><h3 class="pr-h">Final Delivery and Complete Project Documentation</h3><p class="pr-p">All deliverables compiled and delivered via email with a written delivery summary. You receive a complete written record capturing every decision recommendation and milestone.</p></div></div>
+        </div>
+    </section>
+
+    <div class="spot">
+        <div class="spot-flex">
+            <div class="spot-img rv l"><img src="magaret_kou-removebg-preview.png" alt="Magaret Koutomanos"></div>
+            <div class="spot-copy rv r">
+                <div class="spot-ey">Your Strategic Partner</div>
+                <h3 class="spot-h">Every Serious Author Deserves a Professional Who Takes Their Work as Seriously as They Do</h3>
+                <p class="spot-p">Magaret Koutomanos does not offer quick fixes or generic advice. She offers focused expertise applied to your specific manuscript your specific audience and your specific goals.</p>
+                <p class="spot-p">If you are ready to work with someone who matches the seriousness of your commitment to your book with equal seriousness of professional expertise and process Magaret is ready to hear about your project.</p>
+                <a href="mailto:magaretkoutomanos@gmail.com" class="spot-mail"><i class="fas fa-envelope"></i> magaretkoutomanos@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="sc sc-dark" id="testimonials">
+        <div class="sc-hd rv"><span class="sc-ey">Testimonials</span><h2 class="sc-h2">What Authors Say About Working With Magaret Koutomanos</h2><div class="sc-div"></div><p class="sc-sub">The measure of professional expertise is not what a specialist claims about their own work. It is what the authors who have trusted that specialist say about the experience and the results.</p></div>
+        <div class="tm-box rv s">
+            <div class="tm-inner">
+                <div class="tm-q">&ldquo;</div>
+                <h3 class="tm-h">Author Testimonials Coming Soon</h3>
+                <p class="tm-p">As Magaret's practice continues to grow this section will be updated with the documented experiences of authors who have engaged her services. Every testimonial will represent a genuine verified professional collaboration.</p>
+                <p class="tm-p">The most powerful testimonials are specific. They name the service received they describe the experience in detail and they speak to concrete outcomes and results.</p>
+                <p class="tm-note">If you are a current or former client please contact Magaret at <a href="mailto:magaretkoutomanos@gmail.com">magaretkoutomanos@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sc sc-alt" id="contact">
+        <div class="sc-hd rv"><span class="sc-ey">Begin</span><h2 class="sc-h2">Begin Your Project Inquiry</h2><div class="sc-div"></div><p class="sc-sub">Every professional engagement begins with a single step. A detailed carefully considered project inquiry.</p></div>
+        <div class="ct-wrap">
+            <div class="ct-top rv">
+                <p class="ct-top-p">Magaret Koutomanos works with a strictly limited number of authors per quarter. Every author who engages Magaret receives her complete professional attention her deepest expertise and a level of rigor and care that is only possible when the number of concurrent projects is deliberately controlled.</p>
+                <div class="ct-pill"><i class="fas fa-envelope"></i><a href="mailto:magaretkoutomanos@gmail.com">magaretkoutomanos@gmail.com</a></div>
+            </div>
+            <div class="ct-rules rv">
+                <div class="ct-rules-h"><i class="fas fa-info-circle"></i> Please Read Before Submitting</div>
+                <p class="ct-rules-p">All communication will be conducted exclusively via email. There are no telephone consultations no video calls and no informal communications. Every conversation decision and agreement is documented in writing.</p>
+                <p class="ct-rules-p">Inquiries are reviewed personally by Magaret within 48 business hours. Please ensure your email address is current and check your inbox including spam folder within 48 to 72 hours.</p>
+                <p class="ct-rules-p">Incomplete submissions may result in a request for additional information. The quality of your inquiry directly affects the speed and precision of the response.</p>
+            </div>
+            <div class="f-box rv">
+                <div class="f-box-h">Project Inquiry Form</div>
+                <form action="https://formspree.io/f/xyegelrv" method="POST" id="inquiryForm">
+                    <div class="f-row">
+                        <div class="fg"><label class="fg-lbl" for="fn">Full Legal Name</label><input type="text" id="fn" name="Full Name" class="fg-in" required placeholder="Your full name"></div>
+                        <div class="fg"><label class="fg-lbl" for="em">Professional Email Address</label><input type="email" id="em" name="Email Address" class="fg-in" required placeholder="your@email.com"></div>
+                    </div>
+                    <div class="f-row">
+                        <div class="fg"><label class="fg-lbl" for="bt">Book Title or Working Title</label><input type="text" id="bt" name="Book Title" class="fg-in" required placeholder="Your book title"></div>
+                        <div class="fg"><label class="fg-lbl" for="gn">Genre and Category<span class="fg-hint">Be as specific as possible</span></label><input type="text" id="gn" name="Genre" class="fg-in" required placeholder="e.g. Literary Fiction, Self Help"></div>
+                    </div>
+                    <div class="f-row">
+                        <div class="fg"><label class="fg-lbl" for="st">Current Stage of Your Project</label><select id="st" name="Project Stage" class="fg-sel" required><option value="" disabled selected>Select stage</option><option>Completed first draft undergoing self revision</option><option>Completed manuscript ready for editorial review</option><option>Currently with beta readers</option><option>Previously submitted to agents with feedback</option><option>Fully edited preparing for publication</option><option>Already published seeking repositioning</option></select></div>
+                        <div class="fg"><label class="fg-lbl" for="wc">Manuscript Word Count</label><input type="text" id="wc" name="Word Count" class="fg-in" required placeholder="e.g. 75000"></div>
+                    </div>
+                    <div class="fg"><label class="fg-lbl" for="sv2">Service You Are Inquiring About</label><select id="sv2" name="Service Requested" class="fg-sel" required><option value="" disabled selected>Select service</option><option>Manuscript Refinement</option><option>Book Positioning Strategy</option><option>Book Launch Preparation</option><option>Multiple services or full engagement</option><option>Not yet certain</option></select></div>
+                    <div class="fg"><label class="fg-lbl" for="tl">Your Desired Timeline<span class="fg-hint">Include any fixed dates such as publication date</span></label><input type="text" id="tl" name="Timeline" class="fg-in" required placeholder="Describe your ideal timeline"></div>
+                    <div class="fg"><label class="fg-lbl" for="pd">Tell Magaret About Your Project<span class="fg-hint">Most important field. Minimum 200 words recommended. Do not summarize. Describe.</span></label><textarea id="pd" name="Project Details" class="fg-ta" required placeholder="Describe your manuscript, goals, concerns, and what you hope to achieve..."></textarea></div>
+                    <div class="fg"><label class="fg-lbl" for="hf">How Did You Find This Practice</label><input type="text" id="hf" name="How Found" class="fg-in" placeholder="How did you find Magaret Koutomanos"></div>
+                    <button type="submit" class="f-submit" id="subBtn"><i class="fas fa-paper-plane"></i> Submit Project Inquiry for Review</button>
+                    <p class="f-note">All submissions reviewed personally by Magaret within 48 business hours. Please check inbox including spam folder.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ft">
+        <div class="ft-grid">
+            <div>
+                <div class="ft-logo"><img src="mkbooks_logo_circle_3d.jpg" alt="MK Books"><span>MK BOOKS</span></div>
+                <p class="ft-desc">Professional book marketing and manuscript editing for serious authors who demand excellence structure and measurable results.</p>
+                <div class="ft-name">Magaret Koutomanos</div>
+                <div class="ft-role">Book Marketing Specialist &amp; Manuscript Editor</div>
+            </div>
+            <div>
+                <div class="ft-col-h">Navigation</div>
+                <ul class="ft-nav">
+                    <li><a href="#philosophy"><i class="fas fa-chevron-right"></i> Philosophy</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Magaret</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#process"><i class="fas fa-chevron-right"></i> Process</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Submit Inquiry</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="ft-col-h">Contact</div>
+                <div class="ft-ct"><i class="fas fa-envelope"></i><a href="mailto:magaretkoutomanos@gmail.com">magaretkoutomanos@gmail.com</a></div>
+                <div class="ft-ct"><i class="fas fa-globe"></i><span>mkbooks.com</span></div>
+                <div class="ft-ct"><i class="fas fa-clock"></i><span>48 Hour Response Time</span></div>
+                <div class="ft-ct"><i class="fas fa-envelope-open-text"></i><span>Email Communication Only</span></div>
+            </div>
+        </div>
+        <div class="ft-hr"></div>
+        <div class="ft-bot">
+            <div class="ft-copy">&copy; 2024 Magaret Koutomanos. All rights reserved.</div>
+            <div class="ft-legal">All content is the exclusive property of Magaret Koutomanos and may not be reproduced without written permission.</div>
+        </div>
+        <div class="ft-end"><p>Magaret Koutomanos works with a limited number of authors per quarter. All projects and client communication are managed exclusively through documented email correspondence.</p></div>
+    </footer>
+
+    <button class="btt" id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+        window.addEventListener('load',function(){setTimeout(function(){document.getElementById('loader').classList.add('hide')},2800)});
+        !function(){var c=document.getElementById('heroDots');if(!c)return;for(var i=0;i<38;i++){var d=document.createElement('div');d.className='hdot';d.style.left=Math.random()*100+'%';d.style.animationDelay=Math.random()*11+'s';d.style.animationDuration=(Math.random()*7+6)+'s';var s=Math.random()*3+1;d.style.width=s+'px';d.style.height=s+'px';c.appendChild(d)}}();
+        var nav=document.getElementById('nav');
+        window.addEventListener('scroll',function(){nav.classList.toggle('fixed',window.scrollY>70)});
+        var burger=document.getElementById('hamburger'),menu=document.getElementById('navLinks');
+        burger.addEventListener('click',function(){this.classList.toggle('on');menu.classList.toggle('open')});
+        menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('on');menu.classList.remove('open')})});
+        !function(){var els=document.querySelectorAll('.rv');var chips=document.querySelectorAll('.trust-chip');var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');obs.unobserve(e.target)}})},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});els.forEach(function(el){obs.observe(el)});var tobs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){chips.forEach(function(c,i){setTimeout(function(){c.classList.add('v')},i*105)});tobs.unobserve(e.target)}})},{threshold:0.2});var tb=document.getElementById('trustBar');if(tb)tobs.observe(tb)}();
+        var btt=document.getElementById('btt');
+        window.addEventListener('scroll',function(){btt.classList.toggle('v',window.scrollY>500)});
+        btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+        document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-78,behavior:'smooth'})})});
+        var form=document.getElementById('inquiryForm'),btn=document.getElementById('subBtn');
+        form.addEventListener('submit',function(){btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Submitting...';btn.disabled=true});
+        window.addEventListener('scroll',function(){var s=window.scrollY,p=document.querySelector('.port');if(p&&s<window.innerHeight)p.style.transform='translateY('+s*0.065+'px)'});
+        var secs=document.querySelectorAll('section[id]'),navAs=document.querySelectorAll('.nav-links a:not(.cta)');
+        window.addEventListener('scroll',function(){var cur='';secs.forEach(function(s){if(window.scrollY>=s.offsetTop-145)cur=s.id});navAs.forEach(function(a){a.style.color=a.getAttribute('href')==='#'+cur?'var(--gold)':''})});
+    </script>
+</body>
+</html>
